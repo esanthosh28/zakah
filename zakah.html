@@ -1,0 +1,807 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<style>
+			.goldcarat {
+			    border: 1px inset #ccc;
+			}
+			.check {
+			    line-height: 3;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript">
+
+			function scrollto(div)
+			{
+				$('html,body').animate(
+				{
+					scrollTop: $("#"+div).offset().top
+				},'slow');
+			}
+
+			$(document).ready(function(){
+			    $("select.country").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.example').show();
+			        }else{
+			        	$('.example').hide();
+			    	}
+			    });
+				$("select.gold").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.goldchid').show();
+			        }else{
+			        	$('.goldchid').hide();
+			    	}
+			    });
+			   	$("select.silver").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.silverchid').show();
+			        }else{
+			        	$('.silverchid').hide();
+			    	}
+			    });
+			   	$("select.assets").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childasset').show();
+			        }else{
+			        	$('.childasset').hide();
+			    	}
+			    });
+
+			   	$("select.insurance").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childinsurance').show();
+			        }else{
+			        	$('.childinsurance').hide();
+			    	}
+			    });
+		      	$("select.lifeins").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childlifeins').show();
+			        }else{
+			        	$('.childlifeins').hide();
+			    	}
+			    });
+		     	$("select.loan").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childloan').show();
+			        }else{
+			        	$('.childloan').hide();
+			    	}
+			    });
+		      	$("select.invested").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childinvested').show();
+			        }else{
+			        	$('.childinvested').hide();
+			    	}
+			    });      
+			    $("select.prop").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childprop').show();
+			        }else{
+			        	$('.childprop').hide();
+			    	}
+			    });      
+			    $("select.tenent").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childtenent').show();
+			        }else{
+			        	$('.childtenent').hide();
+			    	}
+			    });
+			 	$("select.sale").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childsale').show();
+			        }else{
+			        	$('.childsale').hide();
+			    	}
+			    });
+			 	$("select.cultivate").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childcultivate').show();
+			        }else{
+			        	$('.childcultivate').hide();
+			    	}
+			    });
+			  	$("select.borrowloan").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childborrowloan').show();
+			        }else{
+			        	$('.childborrowloan').hide();
+			    	}
+			    });
+			  	$("select.buisness").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childbuisness').show();
+			        }else{
+			        	$('.childbuisness').hide();
+			    	}
+			    });
+			    $("select.ownbuisness").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childownbuisness').show();
+			        }else{
+			        	$('.childownbuisness').hide();
+			    	}
+			    });
+			    $("select.fixedasset").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childfixedasset').show();
+			        }else{
+			        	$('.childfixedasset').hide();
+			    	}
+			    });
+			    $("select.livestock").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childlivestock').show();
+			        }else{
+			        	$('.childlivestock').hide();
+			    	}
+			    });
+			    $("select.metals").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childmetals').show();
+			        }else{
+			        	$('.childmetals').hide();
+			    	}
+			    });
+			    $("select.treasure").change(function(){
+			        var selectedCountry = $(this).children("option:selected").val();
+			        var option = selectedCountry == 'Yes' ? true : false ;
+			        if(option){
+			  			$('.childtreasure').show();
+			        }else{
+			        	$('.childtreasure').hide();
+			    	}
+			    });
+
+			    $('.weight-select').change(function(){
+					var select  = $('.weight-select>option:selected').html();
+					var lcValue = $('.goldcarat-'+select).val();
+
+				    var wInput = $('.weight-input').val();
+				    if(lcValue!=''&&wInput!=''){
+				        var total = parseInt(lcValue)*parseInt(wInput);
+				        $('.weight-gold-val').val(total);
+				    }
+					$( ".goldcarat" ).unbind('keyup');
+					$('.goldcarat-'+select).keyup(function(){
+						var lcValue = $(this).val();
+						var wInput = $('.weight-input').val();
+						if(lcValue!=''&&wInput!=''){
+							var total = parseInt(lcValue)*parseInt(wInput);
+							$('.weight-gold-val').val(total);
+						}
+						
+					});
+					$( ".weight-input" ).unbind('keyup');
+					$('.weight-input').keyup(function(){
+						var lcValue = $('.goldcarat-'+select).val();
+				        var wInput = $('.weight-input').val();
+						if(lcValue!=''&&wInput!=''){
+					        var total = parseInt(lcValue)*parseInt(wInput);
+					        $('.weight-gold-val').val(total);
+					    }
+					});
+				});
+			});
+
+		</script>
+		<style>
+			form .col-md-12 .form-group select{
+				/*width: 55%;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class='container' style="margin-top: 10px">
+	    	<div class="panel panel-primary">
+				<div class="panel-heading"><strong>:: Zakah Calculator ::</strong></div>
+				<div class="panel-body">
+					<form class="form-inline check">
+						<div class="col-md-12">
+							<p> 
+								<strong>
+									The person should fulfill the following conditions to be eligible to pay Zakah : <br>
+									1. Free Muslim <br>
+									2. Complete Ownership<br>
+									3. Crosses Nisaab (Threshold) <br>
+									4. Passes Hawl (one year) except. Harvest, Wealth from capital
+								</strong>
+							</p>
+							<div class="form-group">
+								<label for="sel1">Did you fulfill all the above conditions? </label>
+								<div>
+									<select class="form-control country" id="sel1">
+										<option value="Yes">Yes</option>
+										<option value="No'">No</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group" >
+							    <label for="text">What currency are you using? </label>
+							    	<input type="text" class="form-control" id="text">
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group" >
+							    <label for="text">Today's nisaab value of gold </label>
+							    	<span>18K <input type="text" class="form-control" id="text" value="2761.152" readonly></span>
+							    	<span>20K <input type="text" class="form-control" id="text" value="3012.166" readonly></span>
+							    	<span>22K <input type="text" class="form-control" id="text" value="3286" readonly></span>
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group" >
+							    <label for="text">Today's nisaab value of silver & cash </label>
+							    	<input type="text" class="form-control" id="text" value="22669.5" readonly>
+							</div>
+						</div>
+						<div class="col-md-12 example">
+							<div class="form-group">
+								<label for="sel1">Do you own Gold? </label>
+								<select class="form-control gold" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 goldchid example">
+						    <div class="form-group"  id="selectGold">
+							    <label for="text">Enter your Local Market valur for Gold </label>
+							    <span value = "18">18K <input type="number" class="form-control goldcarat goldcarat-18"></span>
+							    <span value = "20">20K <input type="number" class="form-control goldcarat goldcarat-20"></span>
+							    <span value = "22">22K <input type="number" class="form-control goldcarat goldcarat-22"></span>
+							    	<!--<input type="text" class="form-control" id="edit"> INR-->
+							</div>
+						</div>
+						<div class="col-md-12 goldchid example">
+						    <div class="form-group" >
+							    <label for="text">Enter Total weight of gold you own</label>
+							    	<input type="number" class="form-control weight-input" id="text"> grams
+							</div>
+						</div>
+						<div class="col-md-12 goldchid example">
+							<div class="form-group">
+								<label for="sel1">What carat of gold do you own? </label>
+								<select class="form-control weight-select">
+									<option value="0"></option>
+									<option value="18">18</option>
+									<option value="20'">20</option>
+									<option value="22'">22</option>
+								</select> K
+							</div>
+						</div>
+						<div class="col-md-12 goldchid example">
+						    <div class="form-group" >
+							    <label for="text">Your Gold Value </label>
+							    	<input type="text" class="form-control weight-gold-val" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you own Silver? </label>
+								<select class="form-control silver" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 silverchid example">
+						    <div class="form-group" >
+							    <label for="text">What is the current market value of silver </label>
+							    	<input type="number" class="form-control" id="text checkEmpty"> INR
+							</div>
+						</div>
+						<div class="col-md-12 silverchid example">
+						    <div class="form-group" >
+							    <label for="text">What is the total weight of the silver you own? </label>
+							    	<input type="number" class="form-control" id="text checkEmpty"> grams
+							</div>
+						</div>
+						<div class="col-md-12 silverchid example">
+						    <div class="form-group" >
+							    <label for="text">Your Silver Value </label>
+							    	<input type="number" class="form-control" id="text" value="0"> INR
+							</div>
+						</div>
+						
+						<div class="col-md-12 example ">
+							<div class="form-group">
+								<label for="sel1">Do you own Cash assets or equialents </label>
+								<select class="form-control assets" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childasset">
+						    <div class="form-group" >
+							    <label for="text">What is your bank balance? </label>
+							    	<input type="number" class="form-control" id="text" step="0.01"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childasset">
+						    <div class="form-group" >
+							    <label for="text">How much have you invested in fixed deposits? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childasset"  >
+						    <div class="form-group" >
+							    <label for="text">How much have you invested in bonds </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childasset">
+						    <div class="form-group" >
+							    <label for="text">How much is the value of your travelers cheques? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childasset">
+						    <div class="form-group" >
+							    <label for="text">How much is the value of your foreign currencies? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childasset">
+						    <div class="form-group" >
+							    <label for="text">How much is the value of your other cash assets & equivalents? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you invested in Employee Remmuneration Funds - EOSB or Gratuity? </label>
+								<select class="form-control country" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you invested in life insurance </label>
+								<select class="form-control country" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Can you withdraw the amount? </label>
+								<select class="form-control country" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Can take a loan from the invested amount? </label>
+								<select class="form-control country" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you deposited excess amount? </label>
+								<select class="form-control country" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you invested in life insurance? </label>
+								<select class="form-control insurance" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childinsurance">
+						    <div class="form-group" >
+							    <label for="text">How much is the total amount of premiums paid every year? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example ">
+							<div class="form-group">
+								<label for="sel1">Have you decided to close your life insurance contribution? </label>
+								<select class="form-control lifeins" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childlifeins">
+						    <div class="form-group" >
+							    <label for="text">How much is the indemnity that you recieved? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childlifeins">
+						    <div class="form-group" >
+							    <label for="text">How much is the premium that was paid? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example ">
+							<div class="form-group">
+								<label for="sel1">Have you given a loan to any one? </label>
+								<select class="form-control loan" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childloan">
+						    <div class="form-group" >
+							    <label for="text">How much loan have you given? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you invested in any investments? </label>
+								<select class="form-control invested" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childinvested">
+						    <div class="form-group" >
+							    <label for="text">What type of investment have you investmented in? </label>
+							    	<input type="text" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you rented out your property? </label>
+								<select class="form-control prop" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childprop">
+						    <div class="form-group" >
+							    <label for="text">How much rent was collected? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childprop">
+						    <div class="form-group" >
+							    <label for="text">How much tax was paid? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childprop">
+						    <div class="form-group" >
+							    <label for="text">How much is the other expences (such as maintaince) spent? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childprop">
+						    <div class="form-group" >
+							    <label for="text">How much debt do you owe? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Are you a tenent (farmer)? </label>
+								<select class="form-control tenent" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childtenent">
+						    <div class="form-group" >
+							    <label for="text">How much was earned? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childtenent">
+						    <div class="form-group" >
+							    <label for="text">How much rent was paid? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childtenent">
+						    <div class="form-group" >
+							    <label for="text">How much debt do you owe? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you have a land / appartment for sale? </label>
+								<select class="form-control sale" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childsale">
+						    <div class="form-group" >
+							    <label for="text">How much is the current market value of the a land / appartment for sale? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Have you borrowed a loan? </label>
+								<select class="form-control borrowloan" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childborrowloan">
+						    <div class="form-group" >
+							    <label for="text">How much loan have you borrowed? </label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you own a buisness? </label>
+								<select class="form-control buisness" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much is the cash equivalents that you own from the buisness?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much is the inventory at market price?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much is the accounts receivable (good debts)?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much is the accounts payable?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Did you take a loan for your buisness? </label>
+								<select class="form-control ownbuisness" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childownbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much personal loan have you taken?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childownbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much commercial loan have you taken for zakatable assets (like raw materials)?</label>
+							    	<input type="number" class="form-control" id="text" step="0.01"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example childownbuisness">
+						    <div class="form-group" >
+							    <label for="text">How much commercial loan have you taken for non zakatable assets (like machinery)?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you have a fixed asset intended for sale? </label>
+								<select class="form-control fixedasset" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childfixedasset">
+						    <div class="form-group" >
+							    <label for="text">How much is the value of the fixed asset?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you own livestock? </label>
+								<select class="form-control livestock" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childlivestock">
+						    <div class="form-group" >
+							    <label for="text">How many camels?</label>
+							    	<input type="number" class="form-control" id="text">
+							</div>
+						</div>
+						<div class="col-md-12 example childlivestock">
+						    <div class="form-group" >
+							    <label for="text">How many cows?</label>
+							    	<input type="number" class="form-control" id="text">
+							</div>
+						</div>
+						<div class="col-md-12 example childlivestock">
+						    <div class="form-group" >
+							    <label for="text">How many goats and sheeps?</label>
+							    	<input type="number" class="form-control" id="text">
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you cultivate crops? </label>
+								<select class="form-control cultivate" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childcultivate">
+						    <div class="form-group" >
+							    <label for="text">What is the total weight of the grains you own?</label>
+							    	<input type="number" class="form-control" id="text"> kgs
+							</div>
+						</div>
+						<div class="col-md-12 example childcultivate">
+						    <div class="form-group" >
+							    <label for="text">What is the current market value of the grains you own?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group childcultivate">
+								<label for="sel1">How were the grains irrigated? </label>
+								<select class="form-control" id="sel1">
+									<option value="Yes">Natural</option>
+									<option value="No'">ManMade</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group childcultivate" >
+							    <label for="text">What is the total weight of the fruits you own?</label>
+							    	<input type="number" class="form-control" id="text"> kgs
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group childcultivate" >
+							    <label for="text">What is the current market value of the fruits you own?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group childcultivate">
+								<label for="sel1">How were the fruits irrigated? </label>
+								<select class="form-control" id="sel1">
+									<option value="Yes">Natural</option>
+									<option value="No'">ManMade</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group childcultivate" >
+							    <label for="text">What is the total weight of the vegetables you own?</label>
+							    	<input type="number" class="form-control" id="text"> kgs
+							</div>
+						</div>
+						<div class="col-md-12 example">
+						    <div class="form-group childcultivate" >
+							    <label for="text">What is the current market value of the vegetables you own?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group childcultivate">
+								<label for="sel1">How were the crops irrigated? </label>
+								<select class="form-control" id="sel1">
+									<option value="Yes">Natural</option>
+									<option value="No'">ManMade</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Do you extract metals? </label>
+								<select class="form-control metals" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childmetals">
+						    <div class="form-group" >
+							    <label for="text">What is the market value of the metals you extracted?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+						<div class="col-md-12 example check">
+							<div class="form-group">
+								<label for="sel1">Did you find any buried treasure? </label>
+								<select class="form-control treasure" id="sel1">
+									<option value="Yes">Yes</option>
+									<option value="No'">No</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 example childtreasure">
+						    <div class="form-group" >
+							    <label for="text">What is the market value of the buried treasure?</label>
+							    	<input type="number" class="form-control" id="text"> INR
+							</div>
+						</div>
+					</form>
+	      		</div>
+	      	</div>
+	    </div>
+	</body>
+</html> 
